@@ -3,9 +3,50 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+.app {
+  background: #17181a;
+  color: white;
+}
+
+.app img {
+  height: 40rem;
+  width: 40rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.app__header {
+  min-height: 10vh;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  width: 80%;
+  margin: auto;
+  padding: 2rem 0rem;
+}
+
+.app__header #app__logo {
+  font-family: "Abril Fatface";
+  text-decoration: none;
+  color: white;
+}
+
+.app__burgerMenu--line1, .app__burgerMenu--line2, .app__burgerMenu--line3 {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: white;
+  pointer-events: none;
 }
 /*# sourceMappingURL=style.css.map */
