@@ -10,7 +10,7 @@
   color: white;
 
   img {
-    height: 40rem;
+    height: 30rem;
     width: 40rem;
     object-fit: cover;
   }
@@ -42,5 +42,25 @@
       background: white;
       pointer-events: none;
     }
+  }
+
+  &__slide {
+    min-height: 100vh;
+    margin: 0 auto 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__slideshow--heroDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: 1;
+    // flex-basis: 25rem;
+    padding-left: 5rem;
+    position: relative;
   }
 }
