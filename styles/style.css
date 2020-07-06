@@ -3,7 +3,10 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .app {
@@ -12,8 +15,8 @@
 }
 
 .app img {
-  height: 30rem;
-  width: 40rem;
+  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -31,7 +34,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: white;
-  width: 80%;
+  width: 90%;
   margin: auto;
   padding: 2rem 0rem;
 }
@@ -40,6 +43,11 @@
   font-family: "Abril Fatface";
   text-decoration: none;
   color: white;
+  font-size: 3rem;
+}
+
+.app__header .app__burgerMenu {
+  cursor: pointer;
 }
 
 .app__burgerMenu--line1, .app__burgerMenu--line2, .app__burgerMenu--line3 {
@@ -53,7 +61,7 @@
 .app__slide {
   min-height: 100vh;
   margin: 0 auto 0 auto;
-  width: 80%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,6 +71,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.app__slideshow .reveal-image,
+.app__slideshow .reveal-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #17181a;
+  left: 0;
+  top: 0;
 }
 
 .app__slideshow--heroDescription {
@@ -81,7 +99,106 @@
           align-items: center;
   -ms-flex-direction: 1;
       flex-direction: 1;
+  -ms-flex-preferred-size: 40rem;
+      flex-basis: 40rem;
   padding-left: 5rem;
   position: relative;
+  font-size: 0.9rem;
+}
+
+.app__slideshow--heroDescription h2 {
+  font-family: "Abril Fatface", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 5rem;
+}
+
+.app__slideshow--heroDescription p {
+  padding: 3rem 0rem;
+  color: #eeeaea;
+}
+
+.app__slideshow--heroImage {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-preferred-size: 25rem;
+      flex-basis: 25rem;
+}
+
+.app__slideshow .mountain-span {
+  color: #ff8b5d;
+}
+
+.app__slideshow .hike-span {
+  color: #567ce4;
+}
+
+.app__slideshow .fashion-span {
+  color: #a76ee7;
+}
+
+.app__slideshow .explore-btn {
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  border: 1px solid white;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  cursor: pointer;
+}
+
+.app__navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  color: #17181a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  opacity: 1;
+  clip-path: circle(50px at 100% -10%);
+  -webkit-clip-path: circle(50px at 100% -10%);
+}
+
+.app__navigation--links {
+  font-size: 3rem;
+  -ms-flex-preferred-size: 30rem;
+      flex-basis: 30rem;
+}
+
+.app__navigation--links h3 {
+  padding: 3rem 0rem;
+}
+
+.app__navigation--contact {
+  -ms-flex-preferred-size: 30rem;
+      flex-basis: 30rem;
+}
+
+.app__navigation--contact h2 {
+  font-size: 3rem;
+  padding: 2rem 0rem;
+}
+
+.app__navigation--contact p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.app__cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */
