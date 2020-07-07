@@ -64,3 +64,10 @@ function animateSlides() {
   });
 }
 animateSlides();
+
+function cursor(e) {
+  let mouse = document.querySelector(".app__cursor");
+  mouse.style.top = e.pageY + "px";
+  mouse.style.left = e.pageX + "px";
+}
+window.addEventListener("mousemove", cursor);

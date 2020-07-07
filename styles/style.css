@@ -206,6 +206,8 @@ body {
   border: 2px solid white;
   border-radius: 50%;
   position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .scrollmagic-pin-spacer {
