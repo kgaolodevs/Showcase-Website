@@ -6,6 +6,7 @@
 
 body {
   font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
 }
 
 .app {
@@ -35,12 +36,9 @@ body {
       color: white;
       font-size: 3rem;
     }
-
-    .app__burgerMenu {
-      cursor: pointer;
-    }
   }
   &__burgerMenu {
+    cursor: pointer;
     &--line1,
     &--line2,
     &--line3 {
@@ -49,6 +47,9 @@ body {
       margin: 0.4rem;
       background: white;
       pointer-events: none;
+    }
+    &--line2 {
+      width: 1.8rem;
     }
   }
 
@@ -66,7 +67,7 @@ body {
     .reveal-text {
       position: absolute;
       width: 100%;
-      height: 100%;
+      height: 101%;
       background: #17181a;
       left: 0;
       top: 0;
@@ -96,6 +97,7 @@ body {
       position: relative;
       flex: 1;
       flex-basis: 25rem;
+      overflow: hidden;
     }
     .mountain-span {
       color: #ff8b5d;

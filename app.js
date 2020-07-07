@@ -14,7 +14,13 @@ function animateSlides() {
     const slideImage = slide.querySelector("img");
 
     // GSAP
-    gsap.to(revealImage, 1, { x: "100%" });
+    const slideTimeline = gsap.timeline({
+      defaults: { duration: 1, ease: "power2.inOut" },
+    });
+    slideTimeline.fromTo(revealImage, { x: "0%" }, { x: "100%" });
+    slideTimeline.fromTo(slideImage, { scale: 2 }, { scale: 1 }, "-=1");
+    slideTimeline.fromTo(revealText, { x: "0%" }, { x: "100%" }, "-=0.7");
+    slideTimeline.fromTo(nav, { y: "-80%" }, { y: "0%" }, "-=0.7");
   });
 }
 animateSlides();
