@@ -91,23 +91,45 @@ function cursorActive(e) {
 }
 
 function navToggle(e) {
-  gsap.to(".app__burgerMenu--line1", 0.5, {
-    rotate: "45",
-    y: 10,
-    background: "black",
-  });
-  gsap.to(".app__burgerMenu--line2", 0.8, {
-    x: 60,
-    opacity: 0,
-    background: "black",
-  });
-  gsap.to(".app__burgerMenu--line3", 0.5, {
-    rotate: "-45",
-    y: -10,
-    background: "black",
-  });
-  gsap.to(".app__navigation", 1, { clipPath: "circle(2500px at 100% -10%)" });
-  gsap.to("#app__logo", 1, { color: "black" });
+  if (!e.target.classList.contains("active")) {
+    e.target.classList.add("active");
+    gsap.to(".app__burgerMenu--line1", 0.5, {
+      rotate: "45",
+      y: 10,
+      background: "black",
+    });
+    gsap.to(".app__burgerMenu--line2", 0.8, {
+      x: 60,
+      opacity: 0,
+      background: "black",
+    });
+    gsap.to(".app__burgerMenu--line3", 0.5, {
+      rotate: "-45",
+      y: -10,
+      background: "black",
+    });
+    gsap.to(".app__navigation", 1, { clipPath: "circle(2500px at 100% -10%)" });
+    gsap.to("#app__logo", 1, { color: "black" });
+  } else {
+    e.target.classList.remove("active");
+    gsap.to(".app__burgerMenu--line1", 0.5, {
+      rotate: "0",
+      y: 0,
+      background: "white",
+    });
+    gsap.to(".app__burgerMenu--line2", 0.8, {
+      x: 0,
+      opacity: 1,
+      background: "white",
+    });
+    gsap.to(".app__burgerMenu--line3", 0.5, {
+      rotate: "0",
+      y: 0,
+      background: "white",
+    });
+    gsap.to(".app__navigation", 1, { clipPath: "circle(50px at 100% -10%)" });
+    gsap.to("#app__logo", 1, { color: "white" });
+  }
 }
 
 window.addEventListener("mousemove", cursor);
