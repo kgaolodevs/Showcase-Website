@@ -1,6 +1,8 @@
 let controller;
 let slideScene;
 let pageScene;
+let mouse = document.querySelector(".app__cursor");
+let mouseText = document.querySelector(".app__cursorText");
 
 function animateSlides() {
   // Init controller
@@ -66,8 +68,26 @@ function animateSlides() {
 animateSlides();
 
 function cursor(e) {
-  let mouse = document.querySelector(".app__cursor");
   mouse.style.top = e.pageY + "px";
   mouse.style.left = e.pageX + "px";
 }
+
+function cursorActive(e) {
+  let item = e.target;
+  if (item.id === "app__logo" || item.classList.contains("app__burgerMenu")) {
+    mouse.classList.add("nav-active");
+  } else {
+    mouse.classList.remove("nav-active");
+  }
+
+  if (item.classList.contains("explore-btn")) {
+    mouse.classList.add("explore-active");
+    mouseText.textContent = "Tap";
+  } else {
+    mouse.classList.remove("explore-active");
+    mouseText.textContent = "";
+  }
+}
+
 window.addEventListener("mousemove", cursor);
+window.addEventListener("mouseover", cursorActive);

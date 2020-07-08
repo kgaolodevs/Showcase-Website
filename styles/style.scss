@@ -103,10 +103,10 @@ body {
       color: #ff8b5d;
     }
     .hike-span {
-      color: rgb(86, 124, 228);
+      color: #567ce4;
     }
     .fashion-span {
-      color: rgb(167, 110, 231);
+      color: #a76ee7;
     }
     .explore-btn {
       padding: 1rem 2rem;
@@ -162,9 +162,31 @@ body {
     border-radius: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    transition-property: background, transform;
+    transform-origin: 75% 75%;
+  }
+  &__cursorText {
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 0.5rem;
+    transform: translate(-50%, -50%);
   }
 }
 
 .scrollmagic-pin-spacer {
   position: static !important;
+}
+
+.nav-active {
+  background: #567ce4;
+  transform: scale(2);
+}
+
+.explore-active {
+  background: #eeeaea;
+  transform: scale(2);
 }

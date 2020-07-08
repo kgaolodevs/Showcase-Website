@@ -208,9 +208,40 @@ body {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition-property: background, -webkit-transform;
+  transition-property: background, -webkit-transform;
+  transition-property: background, transform;
+  transition-property: background, transform, -webkit-transform;
+  -webkit-transform-origin: 75% 75%;
+          transform-origin: 75% 75%;
+}
+
+.app__cursorText {
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 0.5rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .scrollmagic-pin-spacer {
   position: static !important;
+}
+
+.nav-active {
+  background: #567ce4;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+.explore-active {
+  background: #eeeaea;
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 /*# sourceMappingURL=style.css.map */
