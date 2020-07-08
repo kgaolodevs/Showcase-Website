@@ -38,6 +38,7 @@ body {
   width: 90%;
   margin: auto;
   padding: 2rem 0rem;
+  z-index: 2;
 }
 
 .app__header #app__logo {
@@ -57,10 +58,6 @@ body {
   margin: 0.4rem;
   background: white;
   pointer-events: none;
-}
-
-.app__burgerMenu--line2 {
-  width: 1.8rem;
 }
 
 .app__slide {
@@ -215,8 +212,8 @@ body {
   transition-property: background, -webkit-transform;
   transition-property: background, transform;
   transition-property: background, transform, -webkit-transform;
-  -webkit-transform-origin: 75% 75%;
-          transform-origin: 75% 75%;
+  -webkit-transform-origin: 110% 120%;
+          transform-origin: 110% 120%;
 }
 
 .app__cursorText {

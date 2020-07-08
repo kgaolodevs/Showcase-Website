@@ -1,8 +1,9 @@
 let controller;
 let slideScene;
 let pageScene;
-let mouse = document.querySelector(".app__cursor");
-let mouseText = document.querySelector(".app__cursorText");
+const mouse = document.querySelector(".app__cursor");
+const mouseText = document.querySelector(".app__cursorText");
+const burger = document.querySelector(".app__burgerMenu");
 
 function animateSlides() {
   // Init controller
@@ -89,5 +90,25 @@ function cursorActive(e) {
   }
 }
 
+function navToggle(e) {
+  gsap.to(".app__burgerMenu--line1", 0.5, {
+    rotate: "45",
+    y: 10,
+    background: "black",
+  });
+  gsap.to(".app__burgerMenu--line2", 0.8, {
+    x: 60,
+    opacity: 0,
+    background: "black",
+  });
+  gsap.to(".app__burgerMenu--line3", 0.5, {
+    rotate: "-45",
+    y: -10,
+    background: "black",
+  });
+  gsap.to(".app__navigation", 1, { clipPath: "circle(2500px at 100% -10%)" });
+}
+
 window.addEventListener("mousemove", cursor);
 window.addEventListener("mouseover", cursorActive);
+burger.addEventListener("click", navToggle);
