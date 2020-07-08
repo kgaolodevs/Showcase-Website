@@ -110,6 +110,7 @@ function navToggle(e) {
     });
     gsap.to(".app__navigation", 1, { clipPath: "circle(2500px at 100% -10%)" });
     gsap.to("#app__logo", 1, { color: "black" });
+    document.body.classList.add("hide");
   } else {
     e.target.classList.remove("active");
     gsap.to(".app__burgerMenu--line1", 0.5, {
@@ -129,6 +130,7 @@ function navToggle(e) {
     });
     gsap.to(".app__navigation", 1, { clipPath: "circle(50px at 100% -10%)" });
     gsap.to("#app__logo", 1, { color: "white" });
+    document.body.classList.remove("hide");
   }
 }
 

@@ -241,4 +241,8 @@ body {
   -webkit-transform: scale(2);
           transform: scale(2);
 }
+
+.hide {
+  overflow: hidden;
+}
 /*# sourceMappingURL=style.css.map */
