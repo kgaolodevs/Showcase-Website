@@ -107,6 +107,7 @@ function navToggle(e) {
     background: "black",
   });
   gsap.to(".app__navigation", 1, { clipPath: "circle(2500px at 100% -10%)" });
+  gsap.to("#app__logo", 1, { color: "black" });
 }
 
 window.addEventListener("mousemove", cursor);
